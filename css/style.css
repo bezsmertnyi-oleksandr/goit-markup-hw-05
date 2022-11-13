@@ -57,10 +57,6 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current {
-  color: var(--accent-color);
-}
-
 /* Хедер з навігацією */
 
 .header {
@@ -104,6 +100,24 @@ a {
 .header-list-link:focus {
   color: var(--accent-color);
 }
+
+.current {
+  color: var(--accent-color);
+}
+.current::after {
+  display: block;
+  content: "";
+  margin-right: -100%;
+  margin-bottom: -76px;
+  margin-top: 29px;
+  width: 100%;
+  height: 4px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .header-nav-list {
   display: flex;
   margin-left: 93px;
@@ -726,11 +740,17 @@ address {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.2);
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
 }
 
-/* .modal-backdrop.is-hidden .modal {
-  transform: rotate(-180deg);
-} */
+.modal-backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.5);
+}
 
 .modal {
   position: absolute;
@@ -738,8 +758,7 @@ address {
   height: 581px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%) rotate(0);
-  transition: transform 500ms;
+  transform: translate(-50%, -50%);
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
