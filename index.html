@@ -58,20 +58,6 @@
       </div>
     </header>
     <main>
-
-
-<div>
-  
-</div>
-
-
-
-
-
-
-
-
-
       <!--Герой-->
       <section class="hero">
         <div class="overlay">
@@ -80,7 +66,7 @@
               Ефективні рішення для <br />
               вашого бізнесу
             </h1>
-            <button class="hero-button button" type="button">
+            <button class="hero-button button" type="button" data-modal-open>
               Замовити послугу
             </button>
           </div>
@@ -148,24 +134,24 @@
           <ul class="activity-list list">
             <li class="item">
               <img
-                class="activity-img"
                 src="./images/img.jpg"
                 alt="Створення сайту компанії"
               />
+              <div class="activity-desctiption">Десктопні додатки</div>
             </li>
             <li class="item">
               <img
-                class="activity-img"
                 src="./images/img(1).jpg"
                 alt="Розробка веб-додатків"
               />
+              <div class="activity-desctiption">Мобільні додатки</div>
             </li>
             <li class="item">
               <img
-                class="activity-img"
                 src="./images/img(2).jpg"
                 alt="Творчий художник веб-дизайну, який працює над підбором кольорів на графічному планшеті"
               />
+              <div class="activity-desctiption">Дизайнерські рішення</div>
             </li>
           </ul>
         </div>
@@ -442,5 +428,11 @@
         </div>
       </div>
     </footer>
+    <div class="modal-backdrop is-hidden" data-model>
+      <div class="modal">
+        <div class="close-sing" data-model-close>X</div>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
